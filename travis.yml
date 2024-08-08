@@ -21,6 +21,6 @@ branches:
 notifications:
   email:
     recipients:
-      - tszenyong@gmail.com  # Add your email to receive build notifications
+      - elaine610.lau@gmail.com  # Add your email to receive build notifications
     on_success: change  # Notify only on status change
     on_failure: always  # Always notify on failure
