@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - '20.11.1'  # Specify the Node.js version
+
+cache:
+  yarn: true
+  directories:
+    - node_modules  # Cache dependencies to speed up builds
+
+install:
+  - yarn install  # Install dependencies
+
+script:
+  - yarn test  # Run tests
+  - yarn build  # Build the project
+
+branches:
+  only:
+    - trunk  # Specify the branch to build
+
+notifications:
+  email:
+    recipients:
+      - tszenyong@gmail.com  # Add your email to receive build notifications
+    on_success: change  # Notify only on status change
+    on_failure: always  # Always notify on failure
